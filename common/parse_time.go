@@ -1,0 +1,8 @@
+package common
+
+import "time"
+
+//获取当前时间
+func GetNowTome()string{
+	return time.Now().Format("20060102150405")
+}

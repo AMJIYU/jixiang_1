@@ -1,9 +1,12 @@
 package common
 
 import (
+
 	"reflect"
 	"testing"
 )
+var ipfile = []string{"192.168.1.1","192.168.1.2","192.168.1.3"}
+var filename11  = "ips.txt"
 
 func TestReadfile(t *testing.T) {
 	type args struct {
@@ -15,6 +18,7 @@ func TestReadfile(t *testing.T) {
 		want    []string
 		wantErr bool
 	}{
+		{"fileread",args{filename11},ipfile,false},
 		// TODO: Add test cases.
 	}
 	for _, tt := range tests {

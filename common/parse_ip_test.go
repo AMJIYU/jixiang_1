@@ -5,8 +5,6 @@ import (
 	"testing"
 )
 
-
-
 var ips = []string{"192.168.1.1","192.168.1.2","192.168.1.3"}
 
 func TestParseIP(t *testing.T) {
@@ -22,7 +20,7 @@ func TestParseIP(t *testing.T) {
 	}{
 
 		{"ceshi", args{"192.168.1.1-192.168.1.3",""}, ips,false},
-		{"ceshi", args{"","/Users/eleven/GolandProjects/GoScan/ips.txt"}, ips,false},
+		{"ceshi", args{"","ips.txt"}, ips,false},
 		// TODO: Add test cases.
 	}
 	for _, tt := range tests {

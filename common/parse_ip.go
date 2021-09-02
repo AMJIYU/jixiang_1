@@ -33,7 +33,7 @@ func ParseIP(ip string, filename string) (hosts []string, err error) {
 		filehost, _ = Readipfile(filename)
 		hosts = append(hosts, filehost...)
 	}
-	hosts = RemoveDuplicate(hosts)
+	hosts = RemoveDuplicateString(hosts)
 	return hosts, err
 }
 
